@@ -28,6 +28,7 @@ public class Ex01Controller extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("URL Mapping 예제");
 		
+		
 		// 현재 날짜 시간을 추가
 		// 2024년 01월 11일 20:53:30
 		Date now = new Date();
