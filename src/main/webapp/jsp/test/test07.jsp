@@ -48,7 +48,7 @@
 					String storeMenu = (String)maps.get("menu");
 					Integer pointReview = (Integer)maps.get("point");
 					if(storeMenu.equals(menu)){
-					
+						if(four.isEmpty() || (!four.isEmpty() && pointReview>=4)){
 					//if(maps.get("menu").equals(menu)){
 						//if(four.isEmpty() \\ (!four.isEmpty() && maps.get("point")>=4)){
 			%>
@@ -57,7 +57,8 @@
 				<td class="text-center"><%= maps.get("menu")%></td>
 				<td class="text-center"><%= maps.get("point")%></td>
 			</tr>
-			<% }			
+			<%}
+			}			
 				} %>
 		</tbody>
 	</table>
