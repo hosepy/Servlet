@@ -13,7 +13,7 @@
 		MysqlService mysqlService = MysqlService.getInstance();
 		mysqlService.connect();
 		
-		ResultSet resultSet = mysqlService.select("SELECT `name`, `url` FROM `book_mark`;");
+		ResultSet resultSet = mysqlService.select("SELECT * FROM `book_mark`;");
 	
 	%>
 	
@@ -29,6 +29,7 @@
 			<tr>
 				<td><%= resultSet.getString("name") %></td>
 				<td><%= resultSet.getString("url") %></td>
+				<td><a href="/database/test/delete?id=<%= resultSet.getInt("id") %>">삭제</a></td>
 			</tr>
 		<% } %>
 		</tbody>
